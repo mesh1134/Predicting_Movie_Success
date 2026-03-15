@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+gradio
+streamlit
+pandas
+scikit-learn
+joblib
+python-multipart

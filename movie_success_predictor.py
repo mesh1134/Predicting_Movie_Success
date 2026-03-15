@@ -149,12 +149,28 @@ else:
 import joblib
 import os
 
-# 1. Create the Models directory if it doesn't exist yet
-os.makedirs('../Models', exist_ok=True)
+try:
+    # 1. Create the models directory within the project if it doesn't exist
+    models_dir = './models'
+    os.makedirs(models_dir, exist_ok=True)
 
-# 2. Export the trained Random Forest model to that folder
-model_path = '../Models/rf_movie_model.pkl'
-joblib.dump(rf_model, model_path)
+    # 2. Export the trained best model to that folder
+    # We will save the best model found by mesh_utils as well as the random forest model
+    model_path = os.path.join(models_dir, 'best_movie_model.pkl')
+    
+    # Check if best_model_results exists from the previous cell
+    if 'best_model_results' in locals() and best_model_results.get('trained_model') is not None:
+        joblib.dump(best_model_results['trained_model'], model_path)
+        print(f"Success! Best model ({best_model_results['best_model_name']}) has been saved to: {model_path}")
+    elif 'rf_model' in locals():
+        # Fallback to Random Forest
+        rf_path = os.path.join(models_dir, 'rf_movie_model.pkl')
+        joblib.dump(rf_model, rf_path)
+        print(f"Success! Random Forest model has been saved to: {rf_path}")
+    else:
+        print("No trained models found to export in the current session.")
+        
+except Exception as e:
+    print(f"An error occurred while exporting the model: {e}")
 
-print(f"✅ Success! Your model has been saved to: {model_path}")
 

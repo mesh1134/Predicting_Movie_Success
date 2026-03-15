@@ -1,20 +1,34 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h1>🎬 Movie Success Predictor</h1>
 </div>
 
-# Run and deploy your AI Studio app
+## 📌 Overview
+The **Movie Success Predictor** is a machine learning project designed to predict how successful a movie will be based on historical metadata. Originally built to classify movies into distinct success tiers (e.g., 'Flop', 'Average', 'Hit'), this project heavily relies on exploring variables like budgets, genres, and social media likes to forecast IMDb scores and broader reception.
 
-This contains everything you need to run your app locally.
+## 🚀 What makes it interesting?
+Unlike a standard single-model machine learning script, this project features an **optimized model election utility** (`mesh_utils_optimized.py`). 
 
-View your app in AI Studio: https://ai.studio/apps/658b5258-a279-4577-81b1-7f61c2210229
+Instead of just relying on a baseline algorithm, the codebase dynamically cross-evaluates multiple advanced classifiers (such as Random Forest, XGBoost, AdaBoost, SVM, and Logistic Regression) using `RandomizedSearchCV`. It automatically identifies the most accurate algorithm by analyzing the performance metrics against exactly the same data splits, ultimately exporting the true best-performing model for real-world deployment.
 
-## Run Locally
+## 🛠️ Prerequisites
+Before you begin, ensure you have the following installed on your local machine:
+- **Python 3.8+**
+- **pip** (Python package installer)
 
-**Prerequisites:**  Node.js
+## 💻 Run Locally
 
+1. **Clone the repository** (if you haven't already navigated to the folder):
+   ```bash
+   cd Predicting_Movie_Success
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. **Install all required dependencies** using the provided `requirements.txt` file (which includes pandas, scikit-learn, xgboost, etc.):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Notebook or Script**:
+   Experience the model training and evaluation by running the Jupyter Notebook `Movie_Predictor.ipynb`, or simply run the python script directly:
+   ```bash
+   python movie_success_predictor.py
+   ```

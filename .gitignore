@@ -3,3 +3,13 @@ build/
 .env*
 !.env.example
 .idea
+__pycache__
+
+# Agent Helper & Maintenance Scripts
+refine_notebook.py
+refine_notebook_v2.py
+standardize_banners.py
+fix_mesh.py
+fix_comparison.py
+convert_nb.py
+*.txt

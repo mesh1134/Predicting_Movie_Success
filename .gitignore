@@ -1,15 +1,13 @@
-build/
-*.log
 .env*
 !.env.example
-.idea
-__pycache__
+.idea/
+.vscode/
+.venv/
+*.code-workspace
+__pycache__/
+.ipynb_checkpoints/
 
-# Agent Helper & Maintenance Scripts
-refine_notebook.py
-refine_notebook_v2.py
-standardize_banners.py
-fix_mesh.py
-fix_comparison.py
-convert_nb.py
+# Agent-generated helper scripts
+agent_generated/
+
 *.txt

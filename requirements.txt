@@ -6,3 +6,10 @@ pandas
 scikit-learn
 joblib
 python-multipart
+numpy
+matplotlib
+seaborn
+imbalanced-learn
+xgboost
+ipykernel
+plotly

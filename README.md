@@ -85,4 +85,4 @@ This app demonstrates the complete lifecycle of a Machine Learning project:
 3. **Software Engineering:** Packaging the predictive model into an accessible, robust, and visually captivating web application designed for end-users and stakeholders.
 
 ---
-*If you find this project interesting, feel free to ⭐ the repository or connect with me on LinkedIn!*
+*If you find this project interesting, feel free to ⭐ the repository or connect with me on LinkedIn! - https://www.linkedin.com/in/soumesh-satheesan-46b287261/*
